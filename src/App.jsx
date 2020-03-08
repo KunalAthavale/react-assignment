@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Dropdown from './components/Dropdown';
 import FilterResult from './components/FilterResult';
 import Button from './components/Button';
-import TestApi from '../api/index.js';
+import TestApi from 'tank-data-api/tank-data-api';
 import './scss/styles.scss';
 import Header from './components/Header';
 
