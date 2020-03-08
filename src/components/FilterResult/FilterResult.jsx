@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const FilterResult = props => {
-  //const showAmmunitions = () =>
-  //tank.ammunition.map(ammunitionType => <span key={ammunitionType}>ammunition{ammunitionType}</span>);
   const showImages = () => props.filteredTanks.map(tank =>
     <div className="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center"><img className="img-thumbnail rounded tank-img-dimension" data-toggle="tooltip" title={tank.name} src={tank.img} />{tank.name}</div>);
 
@@ -19,8 +17,11 @@ const FilterResult = props => {
         {(props.selections.name !== null) ? <span className="selection-tags">
           {props.selections.name}
         </span> : null}
+        {(props.selections.ammunition !== null) ? <span className="selection-tags">
+          {props.selections.ammunition}
+        </span> : null}
       </div>
-      {(props.selections.type !== null || props.selections.country || props.selections.name !== null) ? <div className="divider"></div> : null}
+      {(props.selections.type !== null || props.selections.country !== null || props.selections.name !== null || props.selections.ammunition !== null) ? <div className="divider"></div> : null}
 
       <div className="images-container row" >{showImages()}</div>
     </div>
