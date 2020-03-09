@@ -8,7 +8,7 @@ const FilterResult = props => {
         className="img-thumbnail rounded tank-img-dimension"
         data-toggle="tooltip" alt={tank.name} title={tank.name} src={tank.img}
       />
-      {tank.name}
+      <div>{tank.name}</div>
     </div>);
 
   return (
